@@ -2,9 +2,9 @@ const Box = require('../models/Box');
 
 class BoxController {
     async store(req, res) {
-        const box = await Box.create({ title: 'Rocketseat' });
+        const box = await Box.create({ title: req.body.title });
 
-        return res.send('RESOURCE HAS BEEN CREATED!');
+        return res.send(box);
     }
 }
 
