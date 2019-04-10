@@ -4,7 +4,7 @@ class BoxController {
     async store(req, res) {
         const box = await Box.create({ title: req.body.title });
 
-        return res.send(box);
+        return res.json(box);
     }
 
     async show(req, res) {
@@ -13,7 +13,7 @@ class BoxController {
             options: { sort: { createdAt: -1 }}
         });
 
-        return res.send(box);
+        return res.json(box);
     }
 }
 
