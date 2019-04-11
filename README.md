@@ -7,11 +7,17 @@ node v11.13.0
 
 Packages:
 
+- express
 - nodemon
+- cryto
 - mongoose
 - multer
+- socket.io
 
-Tools: 
+Dev Tools: 
 
 - Mongo Atlas
 - Insomnia
+
+http://localhost:3232
+https://hrk-omnistack-backend.herokuapp.com

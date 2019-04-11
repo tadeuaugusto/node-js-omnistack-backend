@@ -6,7 +6,7 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-// connects the user in a specific room
+// connects the user in a separated room
 io.on('connection', socket => {
     socket.on('connectRoom', box => {
         socket.join(box);

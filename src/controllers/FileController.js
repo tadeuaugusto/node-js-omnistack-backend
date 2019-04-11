@@ -2,6 +2,10 @@ const Box = require('../models/Box');
 const File = require('../models/File');
 
 class FileController {
+
+    /**
+     * POST {{ baseUrl }}/boxes/{box_id}}/files
+     */
     async store(req, res) {
 
         const box = await Box.findById(req.params.id);
@@ -20,6 +24,7 @@ class FileController {
         return res.json(file);
 
     }
+
 }
 
 module.exports = new FileController();
